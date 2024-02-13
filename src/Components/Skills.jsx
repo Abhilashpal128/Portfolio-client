@@ -48,7 +48,12 @@ function Skills() {
       textColor: "sky-500",
       progress: 80,
     },
-    { icon: <DiReact />, name: "React Js", textColor: "sky-500", progress: 80 },
+    {
+      icon: <DiReact />,
+      name: "React Js ",
+      textColor: "sky-500",
+      progress: 80,
+    },
     {
       icon: <TbBrandNextjs />,
       name: "Next Js",
