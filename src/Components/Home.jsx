@@ -14,7 +14,7 @@ function Home() {
           <div className="md:w-[100%] flex flex-col justify-center  items-center">
             <h1 className="text-white text-4xl md:text-5xl font-bold  pt-20 md:pt-36 ">
               <TypeAnimation
-                sequence={["Hello I'am Abhilash Pal "]}
+                sequence={["Hello ,I am Abhilash Pal "]}
                 cursor={false}
               />
             </h1>
@@ -77,14 +77,6 @@ function Home() {
             <h1>
               <a href="https://twitter.com/?lang=en" target="_blank">
                 <TiSocialTwitterCircular className="text-5xl" />
-              </a>
-            </h1>
-            <h1>
-              <a
-                href="https://www.facebook.com/abhilash.pal.9638"
-                target="_blank"
-              >
-                <TiSocialFacebookCircular className="text-5xl" />
               </a>
             </h1>
           </div>
