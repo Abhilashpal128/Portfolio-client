@@ -138,12 +138,19 @@ function About() {
               <div className="pt-4 md:text-lg text-[#ababab] font-Poppins  font-serif text-sm md:mx-6  ">
                 <p>
                   {" "}
-                  <span className="text-[#00FFFF] py-1 text-xl px-1 font-bold">
-                    Capritech Private Limited :
+                  <p className="flex flex-col">
+                    <span className="text-[#00FFFF] py-1 text-xl px-1 font-bold">
+                      Capritech Global Services Private Limited :
+                    </span>
+                    <span className="text-[#06BF96] pb-2">
+                      (From August 14th to present)
+                    </span>
+                  </p>
+                  <span>
+                    Currently I am Working at Capritech Private Limited as a
+                    MERN stack developer, focusing on the application
+                    'Classmoon'.
                   </span>
-                  I recently completed a 6-month internship at Capritech Private
-                  Limited as a MERN stack developer, focusing on the application
-                  'Classmoon'.
                 </p>
                 <p className="py-1">
                   Gained hands-on experience in MERN stack development.

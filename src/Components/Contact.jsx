@@ -11,25 +11,25 @@ import { PropagateLoader } from "react-spinners";
 
 import { SaveEmail, SendEmail } from "../Apis/ContactApi";
 import { toast } from "react-toastify";
-import Loader from "./Loader";
-
-const color = "#00FFFF";
-const loading = true;
 
 function Contact() {
   const [isActiveLoader, setIsActiveLoader] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
 
-  const handleContactSubmit = async (e) => {
-    e.preventDefault();
+  const handleContactSubmit = async () => {
     setIsActiveLoader(true);
     try {
       const Data = {
-        name: e.target.Name.value,
-        email: e.target.Email.value,
-        message: e.target.Message.value,
-        subject: e.target.Subject.value,
+        name: name,
+        email: email,
+        message: message,
+        subject: subject,
       };
-      if (!Data.name || !Data.email || !Data.message || !Data.message) {
+      console.log(Data);
+      if (!name || !email || !message || !message) {
         toast.error("All fields are required");
         setIsActiveLoader(false);
       } else {
@@ -45,6 +45,10 @@ function Contact() {
         const Sendresponse = await SendEmail(Data);
         if (Sendresponse.success === true) {
           toast.success("Email Sent Successfully");
+          setName("");
+          setEmail("");
+          setMessage("");
+          setSubject("");
           setIsActiveLoader(false);
         } else {
           console.log(Sendresponse);
@@ -80,7 +84,7 @@ function Contact() {
           </h1>
         </div>
 
-        <form onSubmit={handleContactSubmit} className="md:flex">
+        <div className="md:flex">
           {isActiveLoader && (
             <div className=" absolute flex backdrop-blur-sm md:w-[65%] w-[100%]  flex-col md:h-[65%] h-[67%] justify-center items-center gap-3 ">
               <div>
@@ -88,7 +92,7 @@ function Contact() {
               </div>
               <div className="">
                 <PropagateLoader
-                  color={color}
+                  color="#00FFFF"
                   size={25}
                   aria-label="Loading Spinner"
                   data-testid="loader"
@@ -101,35 +105,54 @@ function Contact() {
               <input
                 type="text"
                 id="Name"
+                value={name}
                 placeholder="Your Name"
                 className="bg-[#262626] text-white pl-8 border-2 border-[#06BF96] shadow-md shadow-[#06BF96]  h-[50px] w-[80%] md:w-[38%] rounded-lg"
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
               />
               <input
                 type="text"
                 id="Email"
+                value={email}
                 placeholder="Your Email"
                 className="bg-[#262626] text-white pl-8 border-2 border-[#06BF96] shadow-md shadow-[#06BF96]  h-[50px] w-[80%] md:w-[38%] rounded-lg"
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
               />
             </div>
             <div className="flex justify-center  py-7">
               <input
                 type="text"
                 id="Subject"
+                value={subject}
                 placeholder="Enter Subject"
                 className="bg-[#262626] text-white pl-8  h-[50px] w-[80%] rounded-lg border-2 border-[#06BF96] shadow-md shadow-[#06BF96] "
+                onChange={(e) => {
+                  setSubject(e.target.value);
+                }}
               />
             </div>
             <div className="flex justify-center ">
               <textarea
                 type="text"
                 id="Message"
+                value={message}
                 placeholder="Your Message"
                 className="bg-[#262626] text-white pl-8 h-[200px]   w-[80%] rounded-lg border-2 border-[#00FFFF] shadow-md shadow-[#00FFFF] "
+                onChange={(e) => {
+                  setMessage(e.target.value);
+                }}
               />
             </div>
             <div className="flex justify-center py-6">
               <div className="w-[80%] flex md:justify-start justify-center">
-                <button className="h-[40px] w-[150px] rounded-lg bg-slate-900 text-white shadow-md borger-2 border-black shadow-[#00FFFF] ">
+                <button
+                  className="h-[40px] w-[150px] rounded-lg bg-slate-900 text-white shadow-md borger-2 border-black shadow-[#00FFFF] "
+                  onClick={handleContactSubmit}
+                >
                   Submit
                 </button>
               </div>
@@ -185,7 +208,7 @@ function Contact() {
               </button>
             </div>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );
