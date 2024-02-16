@@ -135,11 +135,11 @@ function About() {
               </div>
             )}
             {activeTab === "Tab2" && (
-              <div className="pt-4 md:text-lg text-[#ababab] font-Poppins  font-serif text-sm md:mx-6  ">
+              <div className="pt-4 lg:text-lg md:text-md text-[#ababab] font-Poppins  font-serif text-sm lg:mx-6  ">
                 <p>
                   {" "}
                   <p className="flex flex-col">
-                    <span className="text-[#00FFFF] py-1 text-xl px-1 font-bold">
+                    <span className="text-[#00FFFF] py-1 text-xl  font-bold">
                       Capritech Global Services Private Limited :
                     </span>
                     <span className="text-[#06BF96] pb-2">
@@ -152,7 +152,28 @@ function About() {
                     'Classmoon'.
                   </span>
                 </p>
-                <p className="py-1">
+                <ul className="list-disc pl-2 ">
+                  <li className="pt-2">
+                    {" "}
+                    Gained hands-on experience in MERN stack development.
+                  </li>
+                  <li className="py-2">
+                    Demonstrated ability to work in a professional environment
+                    and meet project deadlines.
+                  </li>
+                  <li>
+                    {" "}
+                    Application 'Classmoon' is live and accessible via{" "}
+                    <a href="https://app.classmoon.in" target="_blank">
+                      https://app.classmoon.in
+                    </a>
+                  </li>
+                  <li className="py-2">
+                    Currently seeking further opportunities to apply and expand
+                    my skills in the field of full-stack development
+                  </li>
+                </ul>
+                {/* <p className="py-1">
                   Gained hands-on experience in MERN stack development.
                 </p>
                 <p className="py-1">
@@ -165,10 +186,10 @@ function About() {
                     https://app.classmoon.in
                   </a>
                 </p>
-                <p py-1>
+                <p className="py-1">
                   Currently seeking further opportunities to apply and expand my
                   skills in the field of full-stack development
-                </p>
+                </p> */}
               </div>
             )}
           </div>
