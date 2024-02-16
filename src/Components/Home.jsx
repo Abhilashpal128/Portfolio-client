@@ -46,9 +46,14 @@ function Home() {
             </p>
             <div className="my-4 md:w-96 w-full  bg-[#00FFFF] shadow-sm shadow-[#00FFFF] h-1"></div>
             <div className="text-[#040D12] md:py-6  py-6 flex md:justify-start justify-center items-center ">
-              <button className="bg-slate-900  text-white shadow-md shadow-[#00FFFF] md:rounded-xl rounded-lg md:h-11 h-9 md:w-44 w-36 hover:bg-slate-900">
-                View My Resume
-              </button>
+              <a
+                href="https://drive.google.com/file/d/1P98h_2tVV7aSWicoTz-ndPJQQ5MomxMr/view?usp=sharing"
+                target="_blank"
+              >
+                <button className="bg-slate-900  text-white shadow-md shadow-[#00FFFF] md:rounded-xl rounded-lg md:h-11 h-9 md:w-44 w-36 hover:bg-slate-900">
+                  View My Resume
+                </button>
+              </a>
             </div>
           </div>
           {/* <div className=" md:pt-24 pt-8 md:w-[40%]  grid place-items-center">

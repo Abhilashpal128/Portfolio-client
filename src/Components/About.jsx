@@ -152,7 +152,7 @@ function About() {
                     'Classmoon'.
                   </span>
                 </p>
-                <ul className="list-disc pl-2 ">
+                <ul className="list-disc pl-2">
                   <li className="pt-2">
                     {" "}
                     Gained hands-on experience in MERN stack development.

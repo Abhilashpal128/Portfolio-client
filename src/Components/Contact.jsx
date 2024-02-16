@@ -203,9 +203,14 @@ function Contact() {
               </a>
             </div>
             <div className="py-3">
-              <button className="h-[40px] bg-slate-900 text-white shadow-md shadow-[#06BF96]   rounded-md w-[150px]">
-                Download CV
-              </button>
+              <a
+                href="https://drive.google.com/file/d/1P98h_2tVV7aSWicoTz-ndPJQQ5MomxMr/view?usp=sharing"
+                target="_blank"
+              >
+                <button className="h-[40px] bg-slate-900 text-white shadow-md shadow-[#06BF96]   rounded-md w-[150px]">
+                  Download CV
+                </button>
+              </a>
             </div>
           </div>
         </div>
