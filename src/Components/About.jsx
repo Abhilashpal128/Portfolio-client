@@ -143,13 +143,12 @@ function About() {
                       Capritech Global Services Private Limited :
                     </span>
                     <span className="text-[#06BF96] pb-2">
-                      (From August 14th to present)
+                      (From 27th July 2023 to 31st march 2024 )
                     </span>
                   </p>
                   <span>
-                    Currently I am Working at Capritech Private Limited as a
-                    MERN stack developer, focusing on the application
-                    'Classmoon'.
+                    Currently had worked at Capritech Private Limited as a MERN
+                    stack developer, focusing on the application 'Classmoon'.
                   </span>
                 </p>
                 <ul className="list-disc pl-2">

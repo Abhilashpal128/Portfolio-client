@@ -203,7 +203,7 @@ function Contact() {
               </a>
             </div>
             <div className="py-3">
-              <a href="/Abhilash_IT_Resume.pdf" download="Abhilash_Resume">
+              <a href="/Abhilash_IT.pdf" download="Abhilash_Resume">
                 <button className="h-[40px] bg-slate-900 text-white shadow-md shadow-[#06BF96]   rounded-md w-[150px]">
                   Download CV
                 </button>
