@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 import { PropagateLoader } from "react-spinners";
 
-import { SaveEmail, SendEmail } from "../Apis/ContactApi";
+import { SendEmail } from "../Apis/ContactApi";
 import { toast } from "react-toastify";
 
 function Contact() {
@@ -28,20 +28,11 @@ function Contact() {
         message: message,
         subject: subject,
       };
-      console.log(Data);
+
       if (!name || !email || !message || !message) {
         toast.error("All fields are required");
         setIsActiveLoader(false);
       } else {
-        const Saveresponse = await SaveEmail(Data);
-        if (Saveresponse.success === true) {
-          console.log("Email Saved Successfully");
-        } else {
-          console.log(Saveresponse);
-          toast.error("Enter Valid Email");
-          setIsActiveLoader(false);
-        }
-
         const Sendresponse = await SendEmail(Data);
         if (Sendresponse.success === true) {
           toast.success("Email Sent Successfully");
