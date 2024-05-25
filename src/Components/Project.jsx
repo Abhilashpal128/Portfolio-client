@@ -5,9 +5,18 @@ import PizzaPool from "/Images/PizzaPool.png";
 import WeatherApp from "/Images/WeatherApp.jpg";
 import PortFolioImage from "/Images/Portfolio.avif";
 import Todo from "/Images/TodoApp.avif";
+import VotingApp from "/Images/VotingApp.png";
 
 function Project() {
   const Projects = [
+    {
+      image: PizzaPool,
+      name: "Pizza Pool",
+      description:
+        "Designed and implemented the front-end user interface for ordering pizzas, tracking orders,and managing user accounts. Admin add or remove categories and menu-items  ",
+      Technology: "Next Js, Tailwind css, Mongodb",
+      Github: "https://github.com/Abhilashpal128/pizza-pool",
+    },
     {
       image: CabImage,
       name: "VAHAN",
@@ -26,6 +35,15 @@ function Project() {
       Technology: "Next Js , External API",
       Github: "https://github.com/Abhilashpal128/Weather-App",
       live: "https://weather-app-sigma-eight-19.vercel.app/",
+    },
+    {
+      image: VotingApp,
+      name: "Voting App",
+      description:
+        "Voting App Session based authenticated voting app where user can give vote to candidate, admin can add candidate and Declare Results",
+      Technology: "React Js, Node Js, Express Js, Tailwind css , Mongodb",
+      Github: "https://github.com/Abhilashpal128/voting-app-client",
+      live: "https://voting-app-client.vercel.app/",
     },
     {
       image: PortFolioImage,
@@ -80,11 +98,13 @@ function Project() {
                       GitHub
                     </button>
                   </a>
-                  <a href={data.live} target="_blank">
-                    <button className="bg-white w-[100px] font-bold h-[35px] rounded-md">
-                      Live
-                    </button>
-                  </a>
+                  {data.live && (
+                    <a href={data.live} target="_blank">
+                      <button className="bg-white w-[100px] font-bold h-[35px] rounded-md">
+                        Live
+                      </button>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
