@@ -147,8 +147,8 @@ function About() {
                     </span>
                   </p>
                   <span>
-                    Currently had worked at Capritech Private Limited as a MERN
-                    stack developer, focusing on the application 'Classmoon'.
+                    I had worked at Capritech Private Limited as a MERN stack
+                    developer, focusing on the application 'Classmoon'.
                   </span>
                 </p>
                 <ul className="list-disc pl-2">
