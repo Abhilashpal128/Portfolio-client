@@ -34,12 +34,16 @@ function Contact() {
         setIsActiveLoader(false);
       } else {
         const Sendresponse = await SendEmail(Data);
-        if (Sendresponse.success === true) {
+        if (Sendresponse?.data?.success === true) {
+          console.log(Sendresponse);
           toast.success("Email Sent Successfully");
           setName("");
           setEmail("");
           setMessage("");
           setSubject("");
+          setIsActiveLoader(false);
+        } else if (Sendresponse?.data?.status == 500) {
+          toast.error("Failed to send email");
           setIsActiveLoader(false);
         } else {
           console.log(Sendresponse);
@@ -194,7 +198,7 @@ function Contact() {
               </a>
             </div>
             <div className="py-3">
-              <a href="/Abhilash_IT.pdf" download="Abhilash_Resume">
+              <a href="/Abhilash.pdf" download="Abhilash_Resume">
                 <button className="h-[40px] bg-slate-900 text-white shadow-md shadow-[#06BF96]   rounded-md w-[150px]">
                   Download CV
                 </button>
