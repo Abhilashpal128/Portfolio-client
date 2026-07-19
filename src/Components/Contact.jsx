@@ -102,7 +102,7 @@ function Contact() {
                 id="Name"
                 value={name}
                 placeholder="Your Name"
-                className="bg-[#262626] text-white pl-8 border-2 border-[#06BF96] shadow-md shadow-[#06BF96]  h-[50px] w-[80%] md:w-[38%] rounded-lg"
+                className="bg-[#262626] text-white pl-8 border-2 border-[#00FFFF] shadow-md shadow-[#00FFFF]  h-[50px] w-[80%] md:w-[38%] rounded-lg"
                 onChange={(e) => {
                   setName(e.target.value);
                 }}
@@ -112,7 +112,7 @@ function Contact() {
                 id="Email"
                 value={email}
                 placeholder="Your Email"
-                className="bg-[#262626] text-white pl-8 border-2 border-[#06BF96] shadow-md shadow-[#06BF96]  h-[50px] w-[80%] md:w-[38%] rounded-lg"
+                className="bg-[#262626] text-white pl-8 border-2 border-[#00FFFF] shadow-md shadow-[#00FFFF]  h-[50px] w-[80%] md:w-[38%] rounded-lg"
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
@@ -124,7 +124,7 @@ function Contact() {
                 id="Subject"
                 value={subject}
                 placeholder="Enter Subject"
-                className="bg-[#262626] text-white pl-8  h-[50px] w-[80%] rounded-lg border-2 border-[#06BF96] shadow-md shadow-[#06BF96] "
+                className="bg-[#262626] text-white pl-8  h-[50px] w-[80%] rounded-lg border-2 border-[#00FFFF] shadow-md shadow-[#00FFFF] "
                 onChange={(e) => {
                   setSubject(e.target.value);
                 }}
