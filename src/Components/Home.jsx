@@ -38,7 +38,7 @@ const stack = [
 
 function Home() {
   return (
-    <section className="md:min-h-screen py-16" id="home">
+    <section className="md:min-h-screen pb-16 pt-13" id="home">
       <div className="flex flex-col items-center text-center px-6 md:px-24">
         <p className="text-[#06BF96] text-xs md:text-sm uppercase tracking-[0.3em] pt-20 md:pt-32">
           Mumbai, India
