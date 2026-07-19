@@ -1,94 +1,125 @@
 import React from "react";
 import {
-  TiSocialFacebookCircular,
-  TiSocialTwitterCircular,
   TiSocialLinkedinCircular,
   TiSocialGithubCircular,
+  TiSocialTwitterCircular,
 } from "react-icons/ti";
 import { TypeAnimation } from "react-type-animation";
+
+const RESUME_URL =
+  "https://drive.google.com/file/d/16FavR-QgyPuRIsRDlsuK30Qy5Cep22MD/view?usp=drive_link";
+
+const socials = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/abhilashpal8928/",
+    Icon: TiSocialLinkedinCircular,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/Abhilashpal128",
+    Icon: TiSocialGithubCircular,
+  },
+  {
+    label: "Twitter",
+    href: "https://twitter.com/",
+    Icon: TiSocialTwitterCircular,
+  },
+];
+
+const stack = [
+  "React Native",
+  "React.js",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "Next.js",
+];
+
 function Home() {
   return (
-    <>
-      <div className="md:h-screen py-16" id="home">
-        <div className="md:flex md:px-24 text-center md:text-left">
-          <div className="md:w-[100%] flex flex-col justify-center  items-center">
-            <h1 className="text-white text-4xl md:text-5xl font-bold  pt-20 md:pt-36 ">
-              <TypeAnimation
-                sequence={["Hello ,I am Abhilash Pal "]}
-                cursor={false}
-              />
-            </h1>
-            <h1 className="text-[#00FFFF] font-bold text-xl md:text-2xl py-2 ">
-              <TypeAnimation
-                sequence={[
-                  // Same substring at the start will only be typed out once, initially
-                  "Full-Stack MERN Developer",
-                  1000,
-                  "Front-End MERN Developer with React ",
-                  1000,
-                  "Back-End using Node.js and Express",
-                  1000,
-                  "Passionate MERN Developer",
-                  1000,
-                ]}
-                wrapper="span"
-                speed={50}
-                style={{ fontSize: "20px", display: "inline-block" }}
-                repeat={Infinity}
-              />
-            </h1>
-            <p className="text-white sm:pb-5 pb-0  font-Poppins sm:w-[70%] text-center  font-serif md:text-lg text-sm  pt-2 ">
-              I have a strong command over both front-end and back-end
-              technologies, allowing me to build complete and scalable
-              applications. I’m excited to be part of a team where I can
-              contribute my full stack development skills and help create
-              innovative and impactful applications
-            </p>
-            <div className="my-4 md:w-96 w-full  bg-[#00FFFF] shadow-sm shadow-[#00FFFF] h-1"></div>
-            <div className="text-[#040D12] md:py-6  py-6 flex md:justify-start justify-center items-center ">
-              <a
-                href="https://drive.google.com/file/d/16FavR-QgyPuRIsRDlsuK30Qy5Cep22MD/view?usp=drive_link"
-                target="_blank"
-              >
-                <button className="bg-slate-900  text-white shadow-md shadow-[#00FFFF] md:rounded-xl rounded-lg md:h-11 h-9 md:w-44 w-36 hover:bg-slate-900">
-                  View My Resume
-                </button>
-              </a>
-            </div>
-          </div>
-          {/* <div className=" md:pt-24 pt-8 md:w-[40%]  grid place-items-center">
-            <img
-              className="md:h-auto md:w-auto w-80 h-52  "
-              src="../../src/images/Homeimg1.png"
-              alt="home"
-            />
-          </div> */}
+    <section className="md:min-h-screen py-16" id="home">
+      <div className="flex flex-col items-center text-center px-6 md:px-24">
+        <p className="text-[#06BF96] text-xs md:text-sm uppercase tracking-[0.3em] pt-20 md:pt-32">
+          Mumbai, India
+        </p>
+
+        <h1 className="text-white text-4xl md:text-5xl font-bold pt-4">
+          <TypeAnimation sequence={["Hello, I'm Abhilash Pal"]} cursor={false} />
+        </h1>
+
+        <h2 className="text-[#00FFFF] font-bold text-xl md:text-2xl py-2 min-h-[2rem]">
+          <TypeAnimation
+            sequence={[
+              "React Native Developer",
+              1200,
+              "Full-Stack MERN Developer",
+              1200,
+              "Mobile Apps with React Native",
+              1200,
+              "APIs with Node.js and Express",
+              1200,
+            ]}
+            wrapper="span"
+            speed={50}
+            style={{ display: "inline-block" }}
+            repeat={Infinity}
+          />
+        </h2>
+
+        <p className="text-white font-Poppins font-serif md:text-lg text-sm pt-3 sm:w-[70%] leading-relaxed">
+          I build production software for web and mobile — cross-platform apps
+          in React Native, and full-stack applications on the MERN stack. I'm
+          comfortable across the whole product: designing the API, building the
+          screen that consumes it, and shipping the release.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-2 pt-6">
+          {stack.map((tech) => (
+            <span
+              key={tech}
+              className="text-xs md:text-sm text-[#00FFFF] border border-[#00FFFF]/40 rounded px-3 py-1"
+            >
+              {tech}
+            </span>
+          ))}
         </div>
-        <div className=" text-[#00FFFF] md:px-24  grid  place-items-center ">
-          <div className="flex md:pt-7  pt-8">
-            <h1>
+
+        <div className="my-6 md:w-96 w-full bg-[#00FFFF] shadow-sm shadow-[#00FFFF] h-1" />
+
+        <div className="flex flex-wrap justify-center items-center gap-4 pb-2">
+          <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">
+            <button className="bg-slate-900 text-white shadow-md shadow-[#00FFFF] md:rounded-xl rounded-lg md:h-11 h-9 md:w-44 w-36 hover:bg-slate-800 transition-colors">
+              View My Resume
+            </button>
+          </a>
+
+          <a href="#contact">
+            <button className="border-2 border-[#00FFFF] text-[#00FFFF] md:rounded-xl rounded-lg md:h-11 h-9 md:w-44 w-36 hover:bg-[#00FFFF] hover:text-[#0D0A0B] transition-colors">
+              Get In Touch
+            </button>
+          </a>
+        </div>
+
+        <div className="grid place-items-center text-[#00FFFF] pt-8">
+          <div className="flex">
+            {socials.map(({ label, href, Icon }) => (
               <a
-                href="https://www.linkedin.com/in/abhilashpal8928/"
+                key={label}
+                href={href}
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="hover:scale-110 transition-transform duration-300"
               >
-                <TiSocialLinkedinCircular className="text-5xl" />
+                <Icon className="text-5xl" />
               </a>
-            </h1>
-            <h1>
-              <a href="https://github.com/Abhilashpal128" target="_blank">
-                <TiSocialGithubCircular className="text-5xl" />
-              </a>
-            </h1>
-            <h1>
-              <a href="https://twitter.com/?lang=en" target="_blank">
-                <TiSocialTwitterCircular className="text-5xl" />
-              </a>
-            </h1>
+            ))}
           </div>
-          <div className="my-1 w-36 bg-slate-400 h-0.5"></div>
+          <div className="my-1 w-36 bg-slate-400 h-0.5" />
         </div>
       </div>
-    </>
+    </section>
   );
 }
 

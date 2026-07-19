@@ -233,9 +233,9 @@ function About() {
               </p>
             </div>
             <div>
-              <p className="text-[#00FFFF] text-3xl font-bold">Web</p>
+              <p className="text-[#00FFFF] text-3xl font-bold">Mobile</p>
               <p className="text-[#ababab] text-xs uppercase tracking-wider">
-                &amp; Mobile
+                &amp; Web
               </p>
             </div>
           </div>
